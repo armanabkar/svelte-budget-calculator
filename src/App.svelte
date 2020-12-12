@@ -1,19 +1,19 @@
 <script>
   // components
-  import Navbar from "./Navbar.svelte";
-  import ExpenseList from "./ExpenseList.svelte";
-  import Totals from "./Totals.svelte";
-  import ExpenseForm from "./ExpenseForm.svelte";
-  import GithubAwait from "./GithubAwait.svelte";
+  import Navbar from "./components/Navbar.svelte";
+  import ExpenseList from "./components/ExpenseList.svelte";
+  import Totals from "./components/Totals.svelte";
+  import ExpenseForm from "./components/ExpenseForm.svelte";
+  import GithubAwait from "./components/GithubAwait.svelte";
 
   // modal
-  import Modal from "./Modal.svelte";
+  import Modal from "./components/Modal.svelte";
   // data
-  import expenseData from "./expenses";
+  import expenseData from "./expenses/expenses";
   //  general imports
   import { setContext, onMount, onDestroy, afterUpdate } from "svelte";
   // copy expenses
-  // let expenses = [...expenseData];
+  //let expenses = [...expenseData];
   let expenses = [];
   // set editing variables
   let setName = "";
@@ -33,7 +33,7 @@
   }
   // remove expense
   function removeExpense(id) {
-    expenses = expenses.filter(item => item.id !== id);
+    expenses = expenses.filter((item) => item.id !== id);
   }
   setContext("remove", removeExpense);
   setContext("modify", setModifiedExpense);
@@ -48,7 +48,7 @@
   }
   // setModifiedExpense
   function setModifiedExpense(id) {
-    let expense = expenses.find(item => item.id === id);
+    let expense = expenses.find((item) => item.id === id);
     setId = expense.id;
     setName = expense.name;
     setAmount = expense.amount;
@@ -57,7 +57,7 @@
   }
   // editExpense
   function editExpense({ name, amount }) {
-    expenses = expenses.map(item => {
+    expenses = expenses.map((item) => {
       return item.id === setId ? { ...item, name, amount } : { ...item };
     });
     setId = null;
