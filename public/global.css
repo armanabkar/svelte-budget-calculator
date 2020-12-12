@@ -10,15 +10,15 @@ Variables
 ======
 */
 :root {
-  --primaryColor: #2892d7;
-  --mainWhite: #fff;
+  --primaryColor: #6d9197;
+  --mainWhite: rgb(246, 246, 246);
   --offWhite: #f7f7f7;
-  --mainBlack: #222;
-  --mainGrey: #ececec;
+  --mainBlack: #28363d;
+  --mainGrey: #dee1dd;
   --darkGrey: #afafaf;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.3rem;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --lightShadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainBorderRadius: 0.25rem;
 }
@@ -77,9 +77,11 @@ Buttons
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   border-radius: var(--mainBorderRadius);
   background: transparent;
+  max-width: 41%;
 }
 .btn:hover {
   background: var(--primaryColor);
@@ -125,7 +127,7 @@ Navbar
 */
 .nav {
   background: var(--primaryColor);
-  height: 5rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   box-shadow: var(--lightShadow);
@@ -161,7 +163,7 @@ Content
 ======
 */
 .content {
-  padding: 3rem 0;
+  padding: 2rem 0;
   width: 85vw;
   max-width: 35rem;
   margin: 0 auto;
@@ -175,7 +177,8 @@ Main Title
 .main-title {
   text-transform: capitalize;
   color: var(--primaryColor);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
 }
 /* 
 ====== 
@@ -187,8 +190,8 @@ Single Expense
   justify-content: space-between;
   text-transform: capitalize;
   align-items: center;
-  margin-bottom: 2rem;
-  padding: 1.3rem 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1rem;
   border-radius: var(--mainBorderRadius);
   background: var(--mainWhite);
   box-shadow: var(--lightShadow);
@@ -200,7 +203,7 @@ Single Expense
 .single-expense h4 {
   margin-bottom: 0;
   margin-top: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--primaryColor);
 }
 
@@ -223,10 +226,10 @@ Single Expense
   color: var(--primaryColor);
 }
 .delete-btn {
-  color: red;
+  color: #28363d;
 }
 .edit-btn {
-  color: green;
+  color: #28363d;
 }
 /* 
 ====== 
@@ -244,18 +247,22 @@ Expense Form
 
 .form-control label {
   display: block;
+  color: #6d9197;
 }
 .form-control input {
   width: 100%;
   border: none;
   border-bottom: 2px solid var(--darkGrey);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   padding: 0.5rem;
   font-size: 1.2rem;
+  background-color: #f6f6f6;
 }
 .form-empty {
   text-align: center;
-  color: red;
+  margin-bottom: 1.5rem;
+  color: rgb(228, 0, 0);
+  font-weight: 400;
 }
 .form {
   position: relative;
@@ -273,8 +280,13 @@ Expense Form
   justify-content: space-between;
   background: transparent;
   border: none;
-  color: red;
+  color: #28363d;
   cursor: pointer;
+  margin: 0.5rem;
+}
+
+.close-btn:hover {
+  color: rgb(177, 0, 0);
 }
 /* 
 ====== 
@@ -341,4 +353,24 @@ Github Users
 }
 .user-info h3 {
   margin-bottom: 0.75rem;
+}
+.add-exp {
+  color: #28363d;
+}
+.add-exp:hover {
+  color: rgb(246, 246, 246);
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #6d919700, #28363dd3, #6d919700);
+}
+.total-exp {
+  justify-items: center;
+  align-self: center;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: var(--mainBlack);
+  margin-bottom: 1.5rem;
 }

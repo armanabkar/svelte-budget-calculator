@@ -1,7 +1,7 @@
 # Svelte Budget Calculator
 
 <h2 align="center">
-  <img src="screenshots.gif" alt="svelte-budget-calculator" width="600px" />
+  <img src="screenshots.png" alt="svelte-budget-calculator" width="600px" />
   <br>
 </h2>
 

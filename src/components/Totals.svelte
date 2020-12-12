@@ -3,6 +3,7 @@
   export let total = 0;
 </script>
 
-<section class="main-title">
+<section class="total-exp">
   <h2>{title}: $ {total}</h2>
+  <hr />
 </section>

@@ -26,7 +26,11 @@
 </script>
 
 <section class="form">
-  <Title title="add expense" />
+  {#if isEditing}
+    <Title title="edit expense" />
+  {:else}
+    <Title title="add expense" />
+  {/if}
   <form class="expense-form" on:submit|preventDefault={handleSubmit}>
     <div class="form-control">
       <label for="name">name</label>
@@ -47,7 +51,6 @@
       {#if isEditing}edit expense{:else}add expense{/if}
     </button>
     <button type="button" class="close-btn" on:click={hideForm}>
-
       <i class="fas fa-times" />
       close
     </button>
