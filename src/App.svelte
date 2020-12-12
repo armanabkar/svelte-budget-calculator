@@ -4,14 +4,14 @@
   import ExpenseList from "./components/ExpenseList.svelte";
   import Totals from "./components/Totals.svelte";
   import ExpenseForm from "./components/ExpenseForm.svelte";
-  import GithubAwait from "./components/GithubAwait.svelte";
+  import Footer from "./components/Footer.svelte";
 
   // modal
   import Modal from "./components/Modal.svelte";
   // data
   import expenseData from "./expenses/expenses";
   //  general imports
-  import { setContext, onMount, onDestroy, afterUpdate } from "svelte";
+  import { setContext, onMount, afterUpdate } from "svelte";
   // copy expenses
   //let expenses = [...expenseData];
   let expenses = [];
@@ -84,7 +84,6 @@
 
 <Navbar title="Budget Calculator" {showForm} />
 <main class="content">
-  <!-- <GithubAwait /> -->
   {#if isFormOpen}
     <Modal>
       <ExpenseForm
@@ -105,3 +104,4 @@
     clear expenses
   </button>
 </main>
+<Footer />
