@@ -6,7 +6,7 @@
 <nav class="nav">
   <div class="nav-center">
     <h1 class="nav-title">
-      {title}{title.length > 20 ? ' title is too long' : ''}
+      {title}{title.length > 20 ? " title is too long" : ""}
     </h1>
     <button type="button" class="nav-btn add-exp" on:click={showForm}>
       <i class="far fa-plus-square" />

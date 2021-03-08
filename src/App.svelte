@@ -5,15 +5,11 @@
   import Totals from "./components/Totals.svelte";
   import ExpenseForm from "./components/ExpenseForm.svelte";
   import Footer from "./components/Footer.svelte";
-
   // modal
   import Modal from "./components/Modal.svelte";
-  // data
-  import expenseData from "./expenses/expenses";
   //  general imports
   import { setContext, onMount, afterUpdate } from "svelte";
-  // copy expenses
-  //let expenses = [...expenseData];
+
   let expenses = [];
   // set editing variables
   let setName = "";
@@ -79,7 +75,6 @@
   afterUpdate(() => {
     setLocalStorage();
   });
-  $: console.log({ setName, setAmount });
 </script>
 
 <Navbar title="Budget Calculator" {showForm} />
@@ -92,7 +87,8 @@
         {addExpense}
         {editExpense}
         {isEditing}
-        {hideForm} />
+        {hideForm}
+      />
     </Modal>
   {/if}
   <Totals title="total expenses" {total} />
@@ -100,7 +96,8 @@
   <button
     type="button"
     class="btn btn-primary btn-block"
-    on:click={clearExpenses}>
+    on:click={clearExpenses}
+  >
     clear expenses
   </button>
 </main>

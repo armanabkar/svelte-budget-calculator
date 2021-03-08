@@ -1,6 +1,4 @@
 <script>
-  import { blur, fly } from "svelte/transition";
-
   import Title from "./SectionTitle.svelte";
 
   export let name = "";
@@ -9,7 +7,6 @@
   export let editExpense;
   export let isEditing;
   export let hideForm;
-  // $: console.log({ name, amount });
 
   function handleSubmit() {
     if (isEditing) {
@@ -47,7 +44,8 @@
       type="submit"
       class="btn btn-block"
       class:disabled={isEmpty}
-      disabled={isEmpty}>
+      disabled={isEmpty}
+    >
       {#if isEditing}edit expense{:else}add expense{/if}
     </button>
     <button type="button" class="close-btn" on:click={hideForm}>

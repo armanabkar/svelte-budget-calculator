@@ -1,7 +1,7 @@
 <script>
   import SectionTitle from "./SectionTitle.svelte";
   import Expense from "./Expense.svelte";
-  import { scale, blur, fade, slide, fly } from "svelte/transition";
+  import { fly } from "svelte/transition";
   import { flip } from "svelte/animate";
   export let expenses = [];
 </script>
