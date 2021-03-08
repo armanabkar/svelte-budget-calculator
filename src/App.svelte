@@ -1,12 +1,12 @@
 <script>
   // components
-  import Navbar from "./components/Navbar.svelte";
-  import ExpenseList from "./components/ExpenseList.svelte";
-  import Totals from "./components/Totals.svelte";
-  import ExpenseForm from "./components/ExpenseForm.svelte";
-  import Footer from "./components/Footer.svelte";
+  import Navbar from "./components/Layout/Navbar.svelte";
+  import ExpenseList from "./components/Expenses/ExpenseList.svelte";
+  import Totals from "./components/Expenses/Totals.svelte";
+  import ExpenseForm from "./components/Expenses/ExpenseForm.svelte";
+  import Footer from "./components/Layout/Footer.svelte";
   // modal
-  import Modal from "./components/Modal.svelte";
+  import Modal from "./components/Shared/Modal.svelte";
   //  general imports
   import { setContext, onMount, afterUpdate } from "svelte";
 
